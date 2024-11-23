@@ -26,6 +26,42 @@
 </style>
 </head>
 <body>
+    <script>
+        document.addEventListener('click', function(e) {
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = e.clientX + 'px';
+                particle.style.top = e.clientY + 'px';
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5 + 1;
+                const xSpeed = Math.cos(angle) * speed;
+                const ySpeed = Math.sin(angle) * speed;
+                document.body.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 500); // 0.5秒后移除粒子
+            }
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = e.clientX + 'px';
+            particle.style.top = e.clientY + 'px';
+            const angle = Math.random() * Math.PI * 2;
+            const speed = Math.random() * 5 + 1;
+            const xSpeed = Math.cos(angle) * speed;
+            const ySpeed = Math.sin(angle) * speed;
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 500); // 0.5秒后移除粒子
+        });
+    </script>
+
         <h1 class="header">welcome！</h1>
 	<h1>这是<span class="mask">被掩盖的</span>测试文字！</h1>
 	<h3>火热建设中……</h3>
