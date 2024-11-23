@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -14,10 +16,106 @@
     .mask:hover {
         color: #ffffff;
     }
+	body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+            .header img {
+                height: 50px;
+            }
+
+            .header h1 {
+                flex-grow: 1;
+                margin: 0;
+                padding-left: 20px;
+                font-size: 24px;
+            }
+
+        .content {
+            padding: 20px;
+        }
+        /* 简单的按钮样式 */
+        .my-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .my-button:hover {
+                background-color: darkblue;
+            }
+        .menu {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0; 
+            display: flex; 
+            background-color: #333; 
+        }
+
+            .menu li {
+                position: relative; 
+                padding: 15px 20px; 
+            }
+
+                .menu li a {
+                    color: white; 
+                    text-decoration: none; 
+                }
+
+                .menu li:hover {
+                    background-color: #575757; 
+                }
+        .submenu {
+            display: none;
+            position: absolute; 
+            background-color: #333; 
+            list-style-type: none;
+            padding: 0; 
+            margin: 0;
+        }
+
+            .submenu li {
+                padding: 10px 15px; 
+            }
+
+                .submenu li a {
+                    color: white; 
+                }
+        .menu li:hover .submenu {
+            display: block; 
+        }
 </style>
 </head>
 <body>
-	<h1>这是<span class="mask">被掩盖的</span>文字！火热建设中……</h1>
-	<h6>图标生成：https://www.bitbug.net/</h6>
+	<div class="header">
+        <h1>welcome！</h1>
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li>
+                <a href="#about">关于</a>
+                <ul class="submenu">
+                    <li><a href="https://oj.tudoubiancheng.top/group/1231" target="_blank">OJ分团</a></li>
+                </ul>
+        	</li>
+        </ul>
+	</div>
+	<h1>这是<span class="mask">被掩盖的</span>测试文字！</h1>
+	火热建设中……
 </body>
 </html>
