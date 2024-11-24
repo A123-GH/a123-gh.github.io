@@ -26,61 +26,50 @@
 </style>
 </head>
 <body>
-    <script>
-        document.addEventListener('click', function(e) {
-            for (let i = 0; i < 10; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = e.clientX + 'px';
-                particle.style.top = e.clientY + 'px';
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 5 + 1;
-                const xSpeed = Math.cos(angle) * speed;
-                const ySpeed = Math.sin(angle) * speed;
-                document.body.appendChild(particle);
+<script>
+	function f1(){
+  alert("感谢评价！") 
+} 
+var flag=1;
+function f(){ 
+  var Bn = document.getElementById('Bn');
+  var aWidth= document.body.clientWidth || document.documentElement.clientWidth;
+  var aHeight= document.body.clientHeight || document.documentElement.clientHeight;
+  var sJs1=Math.floor(Math.random()*aHeight);
+  var sJs2=Math.floor(Math.random()*aWidth);
+  if(flag==1){
+    Bn.style.top=sJs1 + 'px';
+    Bn.style.left=sJs2+'px'; 
+    flag=2;
 
-                setTimeout(() => {
-                    particle.remove();
-                }, 500); // 0.5秒后移除粒子
-            }
-        });
-
-        document.addEventListener('mousemove', function(e) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = e.clientX + 'px';
-            particle.style.top = e.clientY + 'px';
-            const angle = Math.random() * Math.PI * 2;
-            const speed = Math.random() * 5 + 1;
-            const xSpeed = Math.cos(angle) * speed;
-            const ySpeed = Math.sin(angle) * speed;
-            document.body.appendChild(particle);
-
-            setTimeout(() => {
-                particle.remove();
-            }, 500); // 0.5秒后移除粒子
-        });
-	    document.addEventListener('click', function(e) {
-            for (let i = 0; i < 10; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                const angle = Math.random() * Math.PI * 2;
-                const distance = Math.random() * 50 + 20; // 20到70像素之间的随机距离
-                const x = e.clientX + Math.cos(angle) * distance;
-                const y = e.clientY + Math.sin(angle) * distance;
-                particle.style.left = x + 'px';
-                particle.style.top = y + 'px';
-                document.body.appendChild(particle);
-
-                setTimeout(() => {
-                    particle.remove();
-                }, 500); // 0.5秒后移除粒子
-            }
-        });
-    </script>
-
+  }else if(flag==2){
+    Bn.style.top=sJs1+'px';
+    Bn.style.left=sJs2+'px';
+    flag=3;
+  }else if(flag==3){
+    Bn.style.top=235 + 'px';
+    Bn.style.left=286 + 'px';
+    flag=4;
+  }else if(flag==4){
+    Bn.style.top=235 + 'px';
+    Bn.style.left=360 + 'px';
+    flag=1;
+  }
+	function f2(){
+  alert('啊？你咋点到的？？？');
+}
+}
+</script>
         <h1 class="header">welcome！</h1>
 	<h1>这是<span class="mask">被掩盖的</span>测试文字！</h1>
+	<h1 style="position:absolute; left:280px; top:155px; width:auto; height:210px;">这个网站怎么样？</h1>
+<div id="By" style="position:absolute; left:285px; top:235px;">
+  <input type="button" value=" 很好！大力支持！ " onclick="f1()">
+</div>
+<div id="Bn" style="position:absolute; left:360px; top:235px;">
+  <input type="button" value=" 差劲！呸！ " onmouseover="f()" onclick="f2()">
+</div>
+	
 	<h3>火热建设中……</h3>
 </body>
 </html>
