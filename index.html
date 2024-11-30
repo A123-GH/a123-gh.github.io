@@ -23,6 +23,46 @@
             display: flex;
             align-items: center;
         }
+    .menu {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0; 
+        display: flex; 
+        background-color: #333; 
+    }
+    
+        .menu li {
+            position: relative; 
+            padding: 15px 20px; 
+        }
+    
+            .menu li a {
+                color: white; 
+                text-decoration: none; 
+            }
+    
+            .menu li:hover {
+                background-color: #575757; 
+            }
+    .submenu {
+        display: none;
+        position: absolute; 
+        background-color: #333; 
+        list-style-type: none;
+        padding: 0; 
+        margin: 0;
+    }
+    
+        .submenu li {
+            padding: 10px 15px; 
+        }
+    
+            .submenu li a {
+                color: white; 
+            }
+    .menu li:hover .submenu {
+        display: block; 
+    }
 </style>
 </head>
 <body>
@@ -59,7 +99,19 @@ function f2(){
 }
 }
 </script>
-        <h1 class="header">welcome！</h1>
+        <div class="header">
+<h1 class="header">welcome！</h1>
+	<ul class="menu">
+    <li><a href="index.html">首页</a></li>
+    <li>
+        <a href="#about">关于</a>
+        <ul class="submenu">
+            <li><a href="developers.html" target="_blank">开发者</a></li>
+            <li><a href="https://oj.tudoubiancheng.top/group/1231" target="_blank">OJ分团</a></li>
+        </ul>
+    </li>
+</ul>
+  </div>
 	<h1>这是<span class="mask">被掩盖的</span>测试文字！</h1>
 	<h1 style="position:absolute; left:280px; top:155px; width:auto; height:210px;">这个网站怎么样？（满分10分）</h1>
 <div id="By" style="position:absolute; left:250px; top:235px;">
