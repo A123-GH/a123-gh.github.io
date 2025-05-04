@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -7,15 +5,6 @@
 <link rel="shortcut icon" href="/bitbug_favicon.ico">
 <title>有标题</title>
 <style>
-    .mask {
-        background-color: #252525;
-        color: #252525;
-        transition: color 0.5s;
-    }
-    
-    .mask:hover {
-        color: #ffffff;
-    }
 	.header {
             background-color: #333;
             color: #fff;
@@ -26,50 +15,7 @@
 </style>
 </head>
 <body>
-<script>
-	function f1(){
-  alert("感谢评价！") 
-} 
-var flag=1;
-function f(){ 
-  var Bn = document.getElementById('Bn');
-  var aWidth= document.body.clientWidth || document.documentElement.clientWidth;
-  var aHeight= document.body.clientHeight || document.documentElement.clientHeight;
-  var sJs1=Math.floor(Math.random()*aHeight);
-  var sJs2=Math.floor(Math.random()*aWidth);
-  if(flag==1){
-    Bn.style.top=sJs1+500 + 'px';
-    Bn.style.left=sJs2+'px'; 
-    flag=2;
-  }else if(flag==2){
-    Bn.style.top=sJs1+500+'px';
-    Bn.style.left=sJs2+'px';
-    flag=3;
-  }else if(flag==3){
-    Bn.style.top=235 + 'px';
-    Bn.style.left=250 + 'px';
-    flag=4;
-  }else if(flag==4){
-    Bn.style.top=235 + 'px';
-    Bn.style.left=600 + 'px';
-    flag=1;
-  }
-function f2(){
-  alert('啊？你咋点到的？？？');
-}
-}
-</script>
 <h1 class="header">welcome！</h1>
-	
-	<h1>这是<span class="mask">被掩盖的</span>测试文字！</h1>
-	<h1 style="position:absolute; left:280px; top:155px; width:auto; height:210px;">这个网站怎么样？（满分10分）</h1>
-<div id="By" style="position:absolute; left:250px; top:235px;">
-  <input type="button" value="10分" onclick="f1()">
-</div>
-<div id="Bn" style="position:absolute; left:600px; top:235px;">
-  <input type="button" value="9分" onmouseover="f()" onclick="f2()">
-</div>
-	
 	<h3>火热建设中……</h3>
 </body>
 </html>
